@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application test</string>
+    <string name="text_view">Text View</string>
+    <string name="this_is_simple_application_for_todo">This is simple application for todo</string>
+    <string name="new_text">New Text</string>
+    <string name="save">Save</string>
+</resources>

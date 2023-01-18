@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:ignore="NamespaceTypo"
+    app:layout_height="match_parent"
+    app:layout_width="match_parent" >
+    <TextView
+        app:layout_width="wrap_content"
+        app:layout_height="wrap_content"
+        app:id="@+id/taskText"
+        app:textStyle="bold"
+        app:text="@string/text_view"
+        app:textColor="@color/black"
+        app:layout_marginStart="16dp"
+        app:layout_marginBottom="16dp"
+        app:layout_marginTop="16dp"
+        app:textSize="32sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_width="match_parent"
+        app:layout_height="wrap_content"
+        app:id="@+id/taskRecyclerView"
+        app:layout_below="@id/taskText"
+        app:nestedScrollingEnabled="true"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:layout_width="wrap_content"
+        app:layout_height="wrap_content"
+        app:id="@+id/testFlot"
+        app:layout_alignParentBottom="true"
+        app:layout_alignParentEnd="true"
+        app:layout_margin="32dp"
+        app:src="@drawable/ic_baseline_add"
+        app:backgroundTint="@color/purple_500"/>
+
+</RelativeLayout>
