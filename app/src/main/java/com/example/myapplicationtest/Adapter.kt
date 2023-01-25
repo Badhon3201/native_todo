@@ -4,9 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.task_layout.view.*
 
-class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
-    class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){}
+class Adapter(var data:List<CartInfo>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
+    class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
+        var title = itemView.taskCheckBox
+
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.task_layout,parent,false)
@@ -16,11 +20,11 @@ class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.title.text = data[position].title
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return  data.size
     }
 }
 
